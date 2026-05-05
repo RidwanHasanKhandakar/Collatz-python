@@ -1,12 +1,15 @@
+import matplotlib.pyplot as plt
 def main():
     number=int(input("Enter a number: "))
     max_number,i,steps=number,1,0
+    sequence = [number]  # Store all numbers
     while number >=i:
         if number%2==0 or number ==1:
             number = number /2
         else:
             number = (number*3)+1
         print(number, end=" ")
+        sequence.append(number)  # Add to list
         if number > max_number:
             max_number = number
         steps+=1
@@ -14,6 +17,12 @@ def main():
     print(f"\n\nMax Value: {max_number}")
     #print(f" Min Value: {min_number+0.5}")
     print(f" Total Steps: {steps}\n")
+    
+    plt.plot(sequence)  # Plot the sequence
+    plt.xlabel("Step")
+    plt.ylabel("Value")
+    plt.title("Collatz Sequence")
+    plt.show()
 
     print("[1] to try again")
     print("[0] EXIT")
