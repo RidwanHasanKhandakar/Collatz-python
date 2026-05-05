@@ -6,12 +6,12 @@ def main():
             number = number /2
         else:
             number = (number*3)+1
-        print(number)
+        print(number, end=" ")
         if number > max_number:
             max_number = number
         steps+=1
 
-    print(f" Max Value: {max_number}")
+    print(f"\n\nMax Value: {max_number}")
     #print(f" Min Value: {min_number+0.5}")
     print(f" Total Steps: {steps}\n")
 
