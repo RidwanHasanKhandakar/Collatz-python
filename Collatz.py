@@ -1,6 +1,6 @@
 def main():
     number=int(input("Enter a number: "))
-    max_number,min_number,i,steps=number,number,1,0
+    max_number,i,steps=number,1,0
     while number >=i:
         if number%2==0 or number ==1:
             number = number /2
@@ -9,12 +9,10 @@ def main():
         print(number)
         if number > max_number:
             max_number = number
-        if number < min_number:
-            min_number = number
         steps+=1
 
     print(f" Max Value: {max_number}")
-    print(f" Min Value: {min_number}")
+    #print(f" Min Value: {min_number+0.5}")
     print(f" Total Steps: {steps}\n")
 
     print("[1] to try again")
